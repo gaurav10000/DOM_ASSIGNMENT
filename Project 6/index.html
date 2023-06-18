@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 6</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0;
+            text-align: center;
+            background-color: #212121;
+        }
+        #div{
+            margin: 0px;
+            height: 100vh;
+            background-color: #212121;
+        }
+        h1{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body onkeyup="keyup()" onkeydown="keydown()">
+    <div id="div">
+        <h1 id="h1">
+            Press any key
+        </h1>
+    </div>
+</body>
+    <script>
+        function keyup() {
+            document.getElementById("h1").innerText = "Key is up!";
+            document.getElementsByTagName("div")[0].style.backgroundColor = "blue";
+        }
+        function keydown() {
+            document.getElementById("h1").innerText = "Key is down!";
+            document.getElementsByTagName("div")[0].style.backgroundColor = "red";
+        }
+    </script>
+</html>

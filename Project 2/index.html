@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        #container{
+            align-items: center;
+            text-align: center;
+        }
+        #img{
+            height: 20rem;
+            width: 20rem;
+        }
+        #img:hover{
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Knock on the door twice</h1>
+        <img ondblclick="func()" id="img" src="./door.jpg" alt="door">
+        <audio id="myaudio" src="./who's there.mp3"></audio>
+    </div>
+</body>
+<script>
+    const audio = document.getElementById("myaudio");
+    function func() {
+        audio.play();
+    }
+
+</script>
+</html>

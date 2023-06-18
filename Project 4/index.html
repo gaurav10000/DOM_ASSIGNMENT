@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        #circle{
+            height: 20rem;
+            width: 20rem;
+            background-color: black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading">You cannot escape the red area, can you?</h1>
+        <div id="circle" onmouseenter="fun(this)" onmouseout="func(this)">
+            <audio id="audio" src="./sound.mp3"></audio>
+        </div>
+    </div>
+</body>
+<script>
+    let count = 0;
+    function func(x) {
+        x.style.backgroundColor = "#212121";
+        document.getElementsByTagName('body')[0].style.backgroundColor = "red";
+    }
+    function fun(x) {
+        x.style.backgroundColor = "red";
+        document.getElementsByTagName('body')[0].style.backgroundColor = "#212121";
+        count++;
+        if ( count > 2) {
+            playAudio();
+    }
+
+    function playAudio() {
+            const audio = document.getElementById("audio");
+            audio.play();
+        }
+    }
+    
+</script>
+
+</html>

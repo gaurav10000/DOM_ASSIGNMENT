@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #515151;
+            color: rgb(196, 62, 62);
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        #ele{
+            height: 20rem;
+            width: 20rem;
+            background-color: #121212;
+            border-radius: 50%;
+            margin: 2rem;
+            
+        }
+        
+    </style>
+    <title>Project 3</title>
+</head>
+<body>
+    <div id="container" >
+        <h1 id="h1">
+            Everything disappears in this black hole.
+        </h1>
+        <div id="ele" onmouseover="func1()">
+        </div>
+    </div>
+</body>
+    <script>
+        function func1() {
+            document.getElementById("ele").style.cursor = "none";
+        }
+    </script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            align-items: center;
+            text-align: center;
+        }
+
+        button{
+            width: 8rem;
+            height: 4rem;
+            font-size: x-large;
+        }
+    </style>
+    <title>Project_1</title>
+</head>
+<body>
+    <div id="div">
+        <h1>
+            Hey, wanna see something colorfull than click the below button multiple times <br>
+        </h1>
+        <button id="btn" onclick="func()">Click Me</button>
+    </div>
+</body>
+    <script>
+        const body = document.getElementsByTagName("body")[0];
+        const btn = document.getElementById('btn');
+        const div = document.getElementById("div");
+        function func(){
+            // Creating a new p element
+            const p = document.createElement('p');
+
+            // Changing color here
+            body.style.backgroundColor = `#${changeColor()}`;
+            btn.style.backgroundColor = `#${changeColor()}`;
+            btn.style.color = `#${changeColor()}`;
+            p.style.color = `#${changeColor()}`;
+            div.style.color = `#${changeColor()}`;
+            
+            // Here adding a paragraph element in div
+            const addText = document.createTextNode('More!');
+            p.style.fontSize = "x-large";
+            p.appendChild(addText);
+            div.appendChild(p);
+        }
+
+        // This function will give different different colors at required places
+        function changeColor() {
+            return Math.trunc(Math.random() * 10**6)
+        }
+    </script>
+</html>
